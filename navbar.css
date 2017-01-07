@@ -1,0 +1,149 @@
+body {
+    background-color: #EBE8E4;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", sans-serif;
+    font-weight: 300;
+    font-size: 100%;
+    }
+* {
+    box-sizing: border-box;
+}
+/*Nav-BAR*/
+nav {
+    display: block;
+    overflow: visible;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    border-radius: 0.4em;
+    color: #888;
+
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+#menu-drop, .nav-sub, #logo, .search-form {
+    display: inline-block;
+}
+
+a{
+    color: #aaa;
+    display: block;
+    line-height: 3.9em;
+    font-size: 0.9em;
+    padding: 0 1.5em;
+    text-decoration: none;
+}
+
+#menu-drop{
+    position: absolute;
+    margin: 0.7em 2em;
+    display: none;
+    width: 35px;
+    height: 56px;
+}
+.menu-icon{
+    width: 2.2em;
+    height: 0.3em;
+    background-color: black;
+    margin: 0.3em 0;
+}
+/*
+.drop-btn {
+    display: none;
+    background: url('drop-icon.png') no-repeat;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+}*/
+.drop-cont {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 10em;
+}
+
+.drop-cont a {
+    text-align: center;
+    color: black;
+    padding: 0.1em 0.3em;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .drop-cont {
+    display: block;
+    margin: 2.7em 2em;
+}
+.nav-sub:hover, .drop-cont a:hover{
+    background-color: #282C2F;
+}
+.nav-sub>a:hover, .drop-cont>a:hover{
+    color: #ffffff;
+}
+ #logo > a{
+     padding: 0 2.5em;
+     letter-spacing: 0.2em;
+     font-size: 0.9em;
+     font-weight: bold;
+     color: black;
+ }
+ .search-form{
+     float: right;
+     list-style-type: none;
+     width:14em;
+     line-height: 3.9em;
+     font-size: 0.9em;
+     padding: 0 1.5em;
+
+ }
+input[type=text]{
+    width: 128px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9em;
+    background: url('search-opt.png') no-repeat;
+}
+input[type=text]:focus{
+    background: none;
+}
+
+ /*Responsive*/
+@media screen and (max-width: 1026px) {
+    .nav-sub{
+        display: none;
+    }
+    #menu-drop{
+        display: inline;
+    }
+    nav ul{
+        margin-left: 4em;
+    }
+}
+@media screen and (max-width: 430px){
+    li.search-form{
+        position: fixed;
+        margin-left: -0.7em;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 344px){
+    nav{
+        position: fixed;
+        min-height: 6.5em;
+    }
+    li.search-form{
+        position: fixed;
+        margin-left: 0;
+        left: 2.7em;
+        top: 3.5em;
+    }
+    .drop-cont{
+        z-index: 999;
+    }
+
+}
